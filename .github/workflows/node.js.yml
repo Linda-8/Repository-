@@ -1,12 +1,10 @@
 name: CI
-
 on:
   # События, которые запускают
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
 # jobs запускаются параллельно, если не указана последовательность 
 jobs:
   #  Название job вы можете назвать как угодно
@@ -16,7 +14,7 @@ jobs:
     steps:
       # Action от github: проверяет репозиторий, гит и т.д.
       - uses: actions/checkout@v3
-      
+
       - name: check repo
         run: ls -la
 
@@ -28,7 +26,6 @@ jobs:
       # Пример однолинейного простого скрипта shell
       - name: Run a one-line script
         run: echo Hello, world!
-
       # Пример многолинейного скрипта shell
       - name: Run a multi-line script
         run: |
