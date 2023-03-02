@@ -16,6 +16,9 @@ jobs:
     steps:
       # Action от github: проверяет репозиторий, гит и т.д.
       - uses: actions/checkout@v3
+      
+      - name: check repo
+        run: ls -la
 
       # Устанавливаем все необходимые зависимости и запускаем тесты node
       - name: npm install, test and build
